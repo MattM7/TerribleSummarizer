@@ -1,0 +1,21 @@
+{
+    "name": "Terrible Extension",
+    "version": "0.0",
+    "description": "An extension to end all other extensions",
+    "manifest_version": 2,
+
+    "browser_action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "images/icon16.png"
+      }
+    },
+
+    "content_scripts": [
+        {
+          "matches":["https://*/*"],
+          "js": ["jquery-3.3.1.min.js","summarize.js"]
+        }
+      ]
+
+}
